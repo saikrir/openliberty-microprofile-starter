@@ -65,7 +65,8 @@
     </dependency>
   </dependencies>
   <build>
-    <plugins>
+  <finalName>templateApp</finalName>
+   <plugins>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-war-plugin</artifactId>
