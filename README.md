@@ -1,19 +1,29 @@
 # openliberty-microprofile-starter
+
 A starter JEE Microprofile starter application maven enabled
 
 
+# Instructions
+
 After checking out the project, please perform following steps
 
-let your application Name $ApplicationName
+let your application Name **$ApplicationName**
 
-Please update Application Name at the following places in pom.xml
+## Changes to pom.xml
 
-1. <artifactId>$ApplicationName</artifactId>
-2. <name>$ApplicationName</name>
-3. <app.name>$ApplicationName</app.name>
-4. <finalName>$ApplicationName</finalName>
+	<artifactId>$ApplicationName</artifactId>
+	<name>$ApplicationName</name>
+	<app.name>$ApplicationName</app.name>
+	<finalName>$ApplicationName</finalName>
+		
+
+## Changes to server.xml
+
+**server.xml is locatted at src/main/liberty/config/server.xml**
+
+- Line 1: updated description attribute with something appropriate
+- Line 7: `<webApplication id="$ApplicationName" location="$ApplicationName.war" contextRoot="${app.context.root}" />`
 
 
-Please update Application Name at following places in src/main/liberty/config/server.xml
-1. Line 1: Description
-2. webApplication -> <webApplication id="$ApplicationName" location="$ApplicationName.war" contextRoot="${app.context.root}" />
+## Changes to index.html
+Edit src/webapp/index.html with content appropriate to your application
